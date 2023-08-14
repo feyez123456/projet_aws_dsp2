@@ -1,21 +1,27 @@
+/* App.css */
+
+/* Center the whole application */
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text */
-  min-height: 100vh; /* Ensure the page takes at least the full viewport height */
-  background-color: #f0f0f0; /* Example background color */
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
 /* Header styles (including the "Sign Out" button) */
 .App-header {
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Position at the top */
   display: flex;
-  justify-content: space-between; /* Align items on opposite ends (left and right) */
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333; /* Example background color */
+  background-color: #333;
   color: white;
   width: 100%;
+  z-index: 1; /* Ensure the header is above other content */
 }
 
 /* Style the "Sign Out" button */
@@ -33,38 +39,25 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-top: 120px; /* Add margin to push content below the fixed header */
 }
-/* Notes.css */
 
-.notes-container {
+/* Additional styling for the Voyage list */
+.voyageList {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px; /* Add spacing between the textarea and the button */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Horizontally center items within the .voyageList */
+  margin-top: 200px;
 }
 
-/* Style the textarea */
-.notes-container .notes-textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-/* Style the "Add Note" button */
-.notes-container .notes-button {
-  background-color: #007bff; /* Example button color */
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-/* Optional: Style the list of notes */
-.notes ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Optional: Style individual notes */
-.notes li {
-  margin-bottom: 5px;
+/* Style individual Voyage item */
+.voyageItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 30px;
+  margin: 20px;
+  width: calc(30.33% - 20px); /* Three items per row with spacing */
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
