@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@aws-amplify/cli": "^12.2.3"
+  },
+   "scripts": {
+    "test": "react-scripts test"
   }
 }
